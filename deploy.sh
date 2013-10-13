@@ -3,8 +3,10 @@
 cd $(dirname $0)
 for dotfile in .?*
 do
-    if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
+    if [ $dotfile != '..' ] && [ $dotfile != '.git' ] && [ $dotfile != '.gitmodules' ]
     then
-        echo "ln -isF $PWD/$dotfile $HOME"
+        CMD="ln -isF $PWD/$dotfile $HOME"
+        echo $CMD
+        $CMD
     fi
 done

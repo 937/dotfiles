@@ -20,21 +20,18 @@ endif
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 
-
 set fileencodings=utf-8,cp923,euc-jp,latin1
-set ambiwidth=dowble
+set ambiwidth=double
 syntax on
-
 
 " NeoBundle
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+let g:neobundle_default_git_protocol='https'
 call neobundle#rc(expand('~/.vim/bundle/'))
-
 NeoBundleFetch 'Shougo/neobundle.vim'
-
 NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
     \     'windows' : 'make -f make_mingw32.mak',
@@ -43,10 +40,7 @@ NeoBundle 'Shougo/vimproc', {
     \     'unix' : 'make -f make_unix.mak',
     \    },
     \ }
-
 NeoBundleCheck
-
-:NeoBundleInstall
 
 filetype plugin on
 filetype indent on
@@ -58,6 +52,9 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'vim-scripts/Zenburn'
-Neobundle 'Shougo/unite.vim'
+NeoBundle 'fugalh/desert.vim'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+colorscheme zenburn
 
