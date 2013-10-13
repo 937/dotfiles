@@ -1,4 +1,6 @@
 dotfiles
 ========
 
-configurations
+- Common configurations among all the boxes
+
+
