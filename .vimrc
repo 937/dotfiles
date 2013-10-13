@@ -7,6 +7,12 @@ set display+=lastline
 set autoindent
 set nosmartindent
 set nocindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set smartindent
 set indentexpr=""
 set ruler
 set backspace=indent
